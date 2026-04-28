@@ -1,5 +1,5 @@
 # IAW Cas3 Grup5
-###Queden aquestes pàgines del professorat:
+### Queden aquestes pàgines del professorat:
 
 dispositius.php → llista dispositius per tipus i aula
 alumnes.php → llista i gestió d'alumnes
@@ -10,4 +10,4 @@ nou_material.php → formulari per crear nou maquinari
 I del alumnat:
 alumnat/dashboard.php
 ###
-###Estructura del projecte:
+### Estructura del projecte:
