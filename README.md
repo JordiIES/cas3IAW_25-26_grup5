@@ -11,7 +11,7 @@ nou_material.php → formulari per crear nou maquinari
 I del alumnat:
 alumnat/dashboard.php
 ```
-Estructura del projecte:
+### Estructura del projecte:
 ```
 /var/www/html/cas3/
 ├── index.php          (login)
