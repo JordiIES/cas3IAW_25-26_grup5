@@ -11,3 +11,14 @@ I del alumnat:
 alumnat/dashboard.php
 ###
 ### Estructura del projecte:
+/var/www/html/cas3/
+├── index.php          (login)
+├── config.php         (connexió a la BD)
+├── professorat/
+│   ├── dashboard.php
+│   ├── alumnes.php
+│   └── ...
+├── alumnat/
+│   └── dashboard.php
+└── includes/
+    └── session.php
