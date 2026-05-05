@@ -32,6 +32,7 @@ alumnat/dashboard.php <-- Jordi
     └── dashboard.php       (estat dispositius alumne)
 ```
 ### Com u has de demanar a la IA?
+**Recorda llegir tot!!!**
 1. Descarregar el projecte i <ins>**FER LES PROVES EN LOCAL ABANS DE PUJAR-HO AL GIT-HUB.**</ins>
 2. Puja **tots els arxius del projecte** a la IA i dis-li lo seguent:
 ```
