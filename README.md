@@ -7,8 +7,8 @@ alumnes.php → llista i gestió d'alumnes (llista feta)
 incidencies.php → dispositius en incidència
 nou_alumne.php → formulari per crear nou alumne
 nou_material.php → formulari per crear nou maquinari
-``
-I del alumnat:
+```
+### I del alumnat:
 ```
 alumnat/dashboard.php
 ```
