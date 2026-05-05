@@ -1,28 +1,33 @@
 # IAW Cas3 Grup5
-### Queden aquestes pàgines del professorat:
+### Que queda per fer?
 
 ```
-dispositius.php → llista dispositius per tipus i aula
-alumnes.php → llista i gestió d'alumnes (llista feta)
-incidencies.php → dispositius en incidència
-nou_alumne.php → formulari per crear nou alumne
-nou_material.php → formulari per crear nou maquinari
-```
-### I del alumnat:
-```
+nou_alumne.php
+nou_material.php
+dispositius.php
+incidencies.php
 alumnat/dashboard.php
 ```
 ### Estructura del projecte:
 ```
 /var/www/html/cas3/
-├── index.php          (login)
-├── config.php         (connexió a la BD)
+├── index.php               (login)
+├── config.php              (connexió BD)
+├── logout.php              (tancar sessió)
+├── img/
+│   └── logo.png
+├── includes/
+│   ├── header.php          (navbar + CSS comú)
+│   ├── footer.php          (tancament tags)
+│   └── session.php         (control d'accés)
 ├── professorat/
-│   ├── dashboard.php
-│   ├── alumnes.php
-│   └── ...
-├── alumnat/
-│   └── dashboard.php
-└── includes/
-    └── session.php
+│   ├── dashboard.php       (menú principal)
+│   ├── alumnes.php         (llista alumnes)
+│   ├── gestionar_alumne.php (editar/eliminar alumne)
+│   ├── nou_alumne.php      (formulari nou alumne)
+│   ├── nou_material.php    (formulari nou maquinari)
+│   ├── dispositius.php     (llista dispositius per aula)
+│   └── incidencies.php     (llista incidències)
+└── alumnat/
+    └── dashboard.php       (estat dispositius alumne)
 ```
