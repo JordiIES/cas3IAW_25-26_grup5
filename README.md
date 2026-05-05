@@ -93,4 +93,4 @@ Crear tamé si pots l'arxius gestionar_incidencia
 ```
 5. Per ultim pero no menys important, <ins>**si tens algun dubte preguntam**</ins>.
 <br></br>
-**Tenim fins dimarts de la setmana que ve (12/05/2026) aquell dia inclos**
+**Tenim fins dimarts de la setmana que ve (12/05/2026) aquell dia inclos**.
