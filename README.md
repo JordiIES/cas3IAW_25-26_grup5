@@ -60,7 +60,10 @@ Aquest és el header.php amb tot el CSS disponible:
 [ENGANXA TOT EL PROJECTE]
 ```
 <ins>!!!**Recorda canviar a la segona frase lo de FIRXER QUE TU HAIGUES DE FER per el fitxer que tu haigues de fer**.!!!</ins>
-3. Comprova que tot funciona correctament i que el CSS concideix.
+<br></br>
+3.<ins>**Penjar-ho en una branca diferent**</ins> dintre del GitHub.
+<br></br>
+4. Comprova que tot funciona correctament i que el CSS concideix.
 
 ### Que s'ha de fer a cada arxiu?
 1. **nou_alumne.php** i **nou_material.php** es el botó de crear, i s'ha de fer un formulari que permtigue ficar totes les dades necessaries.
