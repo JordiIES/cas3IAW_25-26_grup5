@@ -78,6 +78,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             cursor: pointer;
         }
 
+        button:hover{
+            background-color: #357abd;
+            color: white;
+        }
+
         .error {
             background-color: #da796fb7;
             color: red;
