@@ -61,7 +61,7 @@ Aquest és el header.php amb tot el CSS disponible:
 ```
 <ins>!!!**Recorda canviar a la segona frase lo de FIRXER QUE TU HAIGUES DE FER per el fitxer que tu haigues de fer**.!!!</ins>
 <br></br>
-3.<ins>**Penjar-ho en una branca diferent**</ins> dintre del GitHub.
+3. <ins>**Penjar-ho en una branca diferent**</ins> dintre del GitHub.
 <br></br>
 4. Comprova que tot funciona correctament i que el CSS concideix.
 
