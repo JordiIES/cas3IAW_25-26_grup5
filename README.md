@@ -2,11 +2,11 @@
 ### Que queda per fer?
 
 ```
-nou_alumne.php
-nou_material.php
-dispositius.php
-incidencies.php
-alumnat/dashboard.php
+nou_alumne.php <-- ?
+nou_material.php <-- ?
+dispositius.php <-- ?
+incidencies.php <-- ?
+alumnat/dashboard.php <-- Jordi
 ```
 ### Estructura del projecte:
 ```
