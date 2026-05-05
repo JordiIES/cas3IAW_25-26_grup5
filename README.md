@@ -5,7 +5,7 @@
 nou_alumne.php <-- ?
 nou_material.php <-- ?
 dispositius.php <-- ?
-incidencies.php <-- ?
+incidencies.php <-- Apla
 alumnat/dashboard.php <-- Jordi
 ```
 ### Estructura del projecte:
