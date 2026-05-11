@@ -26,6 +26,14 @@ if (isset($_POST['desvincular'])) {
     $missatge = 'Dispositiu desvinculat correctament';
 }
 
+if (isset($_POST['assignar'])) {
+    if (!empty($_POST['idMaterial'])) {
+        $pdo->prepare("INSERT INTO Assignacions (idMaterial, idAlumne, dataInici) VALUES (?,?,CURDATE())")
+            ->execute([$_POST['idMaterial'], $id]);
+        $missatge = 'Dispositiu assignat correctament';
+    }
+}
+
 if (isset($_POST['actualitzar'])) {
     $pdo->prepare("UPDATE Alumnes SET nom=?, cognom1=?, cognom2=?, correu=?, grupClasse=? WHERE id=?")
         ->execute([$_POST['nom'], $_POST['cognom1'], $_POST['cognom2'], $_POST['correu'], $_POST['grupClasse'], $id]);
@@ -45,6 +53,15 @@ $stmt2 = $pdo->prepare("
 ");
 $stmt2->execute([$id]);
 $dispositius = $stmt2->fetchAll();
+
+$disponibles = $pdo->query("
+    SELECT m.id, t.tipus, t.model, m.idInventari
+    FROM Material m
+    JOIN TipusMaterial t ON m.idTipus = t.id
+    LEFT JOIN Assignacions a ON a.idMaterial = m.id AND a.dataFinal IS NULL
+    WHERE a.id IS NULL
+    ORDER BY t.tipus
+")->fetchAll();
 
 $navLinks = ['Torna a alumnes' => 'alumnes.php', 'Inici' => 'dashboard.php'];
 require_once '../includes/header.php';
@@ -138,6 +155,18 @@ require_once '../includes/header.php';
             </tr>
             <?php endforeach; ?>
         </table>
+        <?php endif; ?>
+
+        <?php if (!empty($disponibles)): ?>
+        <form method="POST" style="margin-top:16px; display:flex; gap:10px; align-items:center;">
+            <select name="idMaterial" style="flex:1">
+                <option value="">-- Selecciona un dispositiu --</option>
+                <?php foreach ($disponibles as $d): ?>
+                    <option value="<?= $d['id'] ?>"><?= $d['tipus'] ?> - <?= $d['model'] ?> (<?= $d['idInventari'] ?>)</option>
+                <?php endforeach; ?>
+            </select>
+            <button class="btn" type="submit" name="assignar" style="margin-top:0;">+ Assignar</button>
+        </form>
         <?php endif; ?>
     </div>
 </div>

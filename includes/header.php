@@ -68,7 +68,7 @@
         .btn-sm { padding: 4px 10px; background: #e74c3c; color: white; border: none; border-radius: 4px; font-size: 12px; cursor: pointer; }
         .btn-sm:hover { background: #c0392b; }
         .missatge { padding: 10px; border-radius: 4px; margin-bottom: 16px; text-align: center; font-size: 14px; background: #2ecc71; color: white; }
-        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 12px; white-space: nowrap; }
         .badge-actiu { background: #d4edda; color: #155724; }
         .badge-finalitzat { background: #f8d7da; color: #721c24; }
         #cercador { width: 100%; padding: 10px; margin-bottom: 16px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
@@ -76,7 +76,8 @@
         .menu-card { background: white; padding: 24px; border-radius: 8px; text-align: center; text-decoration: none; color: #333; font-size: 15px; }
         .menu-card:hover { background: #4a90d9; color: white; }
         .botons { display: flex; gap: 10px; }
-
+        .badge-warning { background: #fff3cd; color: #856404; }
+        
         select {
             width: 100%;
             padding: 8px;
