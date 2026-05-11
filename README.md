@@ -30,6 +30,9 @@ nou_tipus.php <-- Jordi
 │   ├── gestionar_alumne.php (editar/eliminar alumne)
 │   ├── nou_alumne.php      (formulari nou alumne)
 │   ├── nou_material.php    (formulari nou maquinari)
+│   ├── nou_tipus.php       (formulari nou tipus de material)
+│   ├── gestionar_material.php (editar/eliminar material)
+│   ├── gestionar_incidencia.php (editar/tancar incidència)
 │   ├── dispositius.php     (llista dispositius per aula)
 │   └── incidencies.php     (llista incidències)
 └── alumnat/
