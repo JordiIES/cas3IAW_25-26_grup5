@@ -3,7 +3,7 @@ require_once '../includes/session.php';
 require_once '../config.php';
 checkProfessorat();
 
-$navLinks = ['+ Nou alumne' => 'nou_alumne.php', '+ Nou maquinari' => 'nou_material.php'];
+$navLinks = ['+ Nou alumne' => 'nou_alumne.php', '+ Nou maquinari' => 'nou_material.php', '+ Nova incidència' => 'nova_incidencia.php'];
 require_once '../includes/header.php';
 ?>
 <div class="container">

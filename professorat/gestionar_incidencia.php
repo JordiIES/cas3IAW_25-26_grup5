@@ -10,7 +10,7 @@ $stmt = $pdo->prepare("
     SELECT i.*, a.nom, a.cognom1, a.cognom2,
            t.tipus, t.model, m.idInventari
     FROM Incidencies i
-    JOIN Alumnes a ON i.idAlumne = a.id
+    LEFT JOIN Alumnes a ON i.idAlumne = a.id
     JOIN Material m ON i.idDispositiu = m.id
     JOIN TipusMaterial t ON m.idTipus = t.id
     WHERE i.id = ?

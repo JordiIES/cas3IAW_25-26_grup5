@@ -2,21 +2,19 @@
 require_once '../includes/session.php';
 require_once '../config.php';
 checkProfessorat();
-
 $stmt = $pdo->query("
     SELECT i.id, i.informacio, i.dataOberta, i.dataTancada,
            a.nom, a.cognom1,
            t.tipus, t.model, m.idInventari,
            e.estat
     FROM Incidencies i
-    JOIN Alumnes a ON i.idAlumne = a.id
+    LEFT JOIN Alumnes a ON i.idAlumne = a.id
     JOIN Material m ON i.idDispositiu = m.id
     JOIN TipusMaterial t ON m.idTipus = t.id
     JOIN Estats e ON i.idEstat = e.id
     ORDER BY i.dataOberta DESC
 ");
 $incidencies = $stmt->fetchAll();
-
 $navLinks = ['Inici' => 'dashboard.php'];
 require_once '../includes/header.php';
 ?>
@@ -24,6 +22,10 @@ require_once '../includes/header.php';
     <?php if (isset($_GET['missatge']) && $_GET['missatge'] === 'actualitzat'): ?>
         <div class="missatge" id="missatge" style="margin-bottom: 16px;">Incidència actualitzada correctament</div>
         <script>setTimeout(() => document.getElementById('missatge').style.display = 'none', 2000);</script>
+    <?php endif; ?>
+    <?php if (isset($_GET['missatge']) && $_GET['missatge'] === 'creada'): ?>
+        <div class="missatge" id="missatge" style="margin-bottom: 16px;">Incidència creada correctament</div>
+        <script>setTimeout(() => document.getElementById('missatge').style.display = 'none', 3000);</script>
     <?php endif; ?>
     <h2>Incidències</h2>
     <table>
@@ -38,7 +40,7 @@ require_once '../includes/header.php';
         </tr>
         <?php foreach ($incidencies as $i): ?>
         <tr>
-            <td><?= $i['nom'] ?> <?= $i['cognom1'] ?></td>
+            <td><?= $i['nom'] ? $i['nom'] . ' ' . $i['cognom1'] : '-' ?></td>
             <td><?= $i['tipus'] ?> <?= $i['model'] ?> (<?= $i['idInventari'] ?>)</td>
             <td><?= $i['informacio'] ?></td>
             <td><?= $i['dataOberta'] ?></td>

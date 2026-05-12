@@ -2,10 +2,8 @@
 require_once '../includes/session.php';
 require_once '../config.php';
 checkProfessorat();
-
 $ubicacions = $pdo->query("SELECT * FROM Ubicacions")->fetchAll();
 $filtreAula = $_GET['aula'] ?? '';
-
 $sql = "
     SELECT m.id, t.tipus, t.model, m.idInventari, u.nom AS aula,
            a.nom AS alumNom, a.cognom1, e.estat
@@ -14,18 +12,19 @@ $sql = "
     JOIN Ubicacions u ON m.idUbicacio = u.id
     LEFT JOIN Assignacions ass ON ass.idMaterial = m.id AND ass.dataFinal IS NULL
     LEFT JOIN Alumnes a ON ass.idAlumne = a.id
-    LEFT JOIN Incidencies i ON i.idDispositiu = m.id AND i.idEstat != 3
+    LEFT JOIN Incidencies i ON i.id = (
+        SELECT id FROM Incidencies
+        WHERE idDispositiu = m.id AND idEstat != 3
+        ORDER BY dataOberta DESC
+        LIMIT 1
+    )
     LEFT JOIN Estats e ON i.idEstat = e.id
 ";
-
 if ($filtreAula) {
     $sql .= " WHERE u.id = " . (int)$filtreAula;
 }
-
 $sql .= " ORDER BY u.nom, t.tipus";
-
 $dispositius = $pdo->query($sql)->fetchAll();
-
 $navLinks = ['+ Nou maquinari' => 'nou_material.php', 'Inici' => 'dashboard.php'];
 require_once '../includes/header.php';
 ?>

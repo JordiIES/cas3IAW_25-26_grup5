@@ -159,6 +159,7 @@ require_once '../includes/header.php';
 
     <div class="card">
         <h3>Incidències</h3>
+        <a class="btn" href="nova_incidencia.php?idMaterial=<?= $id ?>" style="margin-bottom:16px; display:inline-block;">+ Nova incidència</a>
         <?php if (empty($incidencies)): ?>
             <p style="color:#888; font-size:14px;">Cap incidència registrada.</p>
         <?php else: ?>
