@@ -26,7 +26,7 @@ $sql .= " ORDER BY u.nom, t.tipus";
 
 $dispositius = $pdo->query($sql)->fetchAll();
 
-$navLinks = ['Inici' => 'dashboard.php'];
+$navLinks = ['+ Nou maquinari' => 'nou_material.php', 'Inici' => 'dashboard.php'];
 require_once '../includes/header.php';
 ?>
 <div class="container">

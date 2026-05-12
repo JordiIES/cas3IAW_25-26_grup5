@@ -2,21 +2,19 @@
 require_once '../includes/session.php';
 require_once '../config.php';
 checkProfessorat();
-
 $stmt = $pdo->query("SELECT * FROM Alumnes ORDER BY cognom1, cognom2");
 $alumnes = $stmt->fetchAll();
-
-$navLinks = ['Inici' => 'dashboard.php'];
+$navLinks = ['+ Nou alumne' => 'nou_alumne.php', 'Inici' => 'dashboard.php'];
 require_once '../includes/header.php';
 ?>
 <div class="container">
     <?php if (isset($_GET['missatge']) && $_GET['missatge'] === 'actualitzat'): ?>
         <div class="missatge" id="missatge" style="margin-bottom: 16px;">Alumne actualitzat correctament</div>
-        <script>
-            setTimeout(() => {
-                document.getElementById('missatge').style.display = 'none';
-            }, 1500);
-        </script>
+        <script>setTimeout(() => document.getElementById('missatge').style.display = 'none', 1500);</script>
+    <?php endif; ?>
+    <?php if (isset($_GET['missatge']) && $_GET['missatge'] === 'creat'): ?>
+        <div class="missatge" id="missatge" style="margin-bottom: 16px;">Alumne creat correctament</div>
+        <script>setTimeout(() => document.getElementById('missatge').style.display = 'none', 3000);</script>
     <?php endif; ?>
     <h2>Llista d'alumnes</h2>
     <input type="text" id="cercador" placeholder="Cercar alumne...">
