@@ -1,17 +1,4 @@
 # IAW Cas3 Grup5
-### Que queda per documentar?
-```
-dashboard.php(alumnat) <-- Jordi
-dispositius.php <-- Gabi
-(gestionar_alumne.php) 
-(gestionar_incidencia.php)
-(gestionar_material.php)
-incidencies.php <-- Apla
-nou_alumne.php <-- Jordi
-nou_material.php <-- Jordi
-nou_tipus.php <-- Jordi
-```
-() --> Vol dir que encara no se si documentar-ho o fer-ho com si fos un agreguat de cada arxiu
 ### Estructura del projecte:
 ```
 /var/www/html/cas3/
@@ -38,4 +25,3 @@ nou_tipus.php <-- Jordi
 └── alumnat/
     └── dashboard.php       (estat dispositius alumne)
 ```
-**Tenim fins dimarts de la setmana que ve (12/05/2026) aquell dia inclos**.
